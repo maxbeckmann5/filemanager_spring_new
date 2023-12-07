@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "54eaaeed-a8b6-4b48-970b-fe2a1f0a12ac",
+		"name": "filemanager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31336089"
+	},
+	"item": [
+		{
+			"name": "create a new file",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test6\",\r\n    \"path\": \"/\",\r\n    \"size\": 2048,\r\n    \"lastConfigured\": \"2023-11-06T12:30:00\",\r\n    \"fileType\": \"pdf\"\r\n}"
+				},
+				"url": "http://localhost:8080/files/test3"
+			},
+			"response": []
+		},
+		{
+			"name": "download file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/files/test2"
+			},
+			"response": []
+		},
+		{
+			"name": "delete a file",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/files/test3"
+			},
+			"response": []
+		},
+		{
+			"name": "creates a new folder",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"created\": \"2023-12-06T09:20:12\", \r\n  \"path_foldername\": \"MeinOrdnerName\"\r\n}\r\n"
+				},
+				"url": "http://localhost:8080/folders/folder3"
+			},
+			"response": []
+		},
+		{
+			"name": "get folder information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/folders/folder1"
+			},
+			"response": []
+		},
+		{
+			"name": "deletes a folder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/folders/folder1"
+			},
+			"response": []
+		}
+	]
+}
