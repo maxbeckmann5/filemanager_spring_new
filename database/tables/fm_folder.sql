@@ -1,4 +1,5 @@
 CREATE TABLE IF NOT EXISTS fm_folder (
     path_foldername VARCHAR(255) NOT NULL,
-    created DATETIME(6)
+    created DATETIME(6),
+    PRIMARY KEY (path_foldername)
 );
